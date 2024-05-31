@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GNOSIS - ABOUT </title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+<div class="containers">
+    <div class="navbar" id="navbar">
+        <a href="index.html"><img src="logo.png" class="logo"></a>
+        <nav id="navmenu">
+            <ul>
+                <li><a href="home.html">Overview</a></li>
+                <li><a href="region.html">Insights</a></li>
+                <li><a href="odyssey.html">Odyssey</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class="navclose" id="navclose">
+                <img src="close-line.png" class="ri-close-circle-fill">
+            </div>
+        </nav>
+        <div class="navtoggle" id="navtoggle">
+            <img src="apps-line.png" class="ri-apps-line">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <section class="parallax_about">
+        <div class="content">
+            <h1>About Us</h1>
+            <p>At GNOSIS, we are on a mission to unravel the mysteries of quantum computing.
+                Derived from the Greek noun meaning "knowledge" or "awareness," GNOSIS is dedicated
+                to providing comprehensive information on quantum computing.</p>
+            <p>We strive to be at the forefront of this transformative technology,
+                empowering today's youth to explore the cutting-edge realms of science and technology.</p>
+        </div>
+    </section>
+
+    <section class="parallax mission">
+        <div class="content">
+            <h2>Mission:</h2>
+            <p>Our mission is to embolden and equip today's youth with the tools,
+                knowledge, and inspiration to delve fearlessly into the frontiers
+                of science and technology. We aspire to ignite within them a passion
+                for discovery, fostering a generation of innovators who will shape the
+                future with their ingenuity and creativity. Through engaging programs,
+                hands-on experiences, and mentorship, we seek to cultivate a sense of curiosity
+                and exploration, empowering young minds to push boundaries, challenge conventions,
+                and unlock the limitless potential of tomorrow's advancements.</p>
+        </div>
+    </section>
+
+    <section class="team parallax" id="thankyou">
+        <div class="content">
+            <h1 id="thankyou-message">Thank You for Visiting!</h1>
+            <p>Thank you for exploring our website. We appreciate your time and interest in GNOSIS.</p>
+        </div>
+    </section>
+
+    <section class="contact parallax">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>Got questions or suggestions? Reach out to us:</p>
+            <ul>
+                <li>Email: lalvizo@crc.pshs.edu.ph</li>
+                <li>Phone: (085) 817 0536 </li>
+            </ul>
+            <div class="owner-photo">
+                <img src="me.png" alt="Owner Photo">
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    document.getElementById('thankyou').addEventListener('mouseover', function(event) {
+        const confettiCount = 50; 
+        const confettiContainer = document.querySelector('.content');
+        for (let i = 0; i < confettiCount; i++) {
+            const confetti = document.createElement('div');
+            confetti.classList.add('confetti');
+            confetti.style.left = Math.random() * event.target.offsetWidth + 'px';
+            confetti.style.animationDelay = Math.random() * 3 + 's';
+            confettiContainer.appendChild(confetti);
+        }
+    });
+
+    const navbar = document.getElementById('navbar');
+        const navToggle = document.getElementById('navtoggle');
+        const navClose = document.getElementById('navclose');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navbar.classList.add('show-menu');
+            });
+        }
+
+        if (navClose) {
+            navClose.addEventListener('click', () => {
+                navbar.classList.remove('show-menu');
+            });
+        }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css">
+    <link rel="stylesheet" href="cookies.css">
+    <title>GNOSIS</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar" id="navbar">
+            <img src="logo.png" class="logo">
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h1>Quantum Computing</h1>
+                <p>Embark in the captivating realm of Quantum Computing.<br>
+                    Delve into the mysterious world of qubits, quantum
+                    algorithms,<br> and groundbreaking applications.</p>
+                <p id='second'>This is your portal where science fiction meets reality.</p>
+                <button onclick="redirect()">EXPLORE!</button>
+            </div>
+        </div>
+
+        <div id="cookies">
+            <div id="subcontainer">
+                <div class="cookies">
+                    <p>This website uses <u>cookies to ensure you get the best experience on GNOSIS</u></p>
+                    <button id="cookies-btn">That's Fine!</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="form" id="login-form-container">
+            <form id="login-form" class="login-form">
+                <fieldset form='Log in!'>
+                    <legend>Sign up here!</legend>
+                    <label for='name'>Enter name:</label><br>
+                    <input id='name' type='text' required><br><br>
+                    <label for='email'>Email:</label><br>
+                    <input id='email' type='email' required><br><br>
+                    <input type="submit" value="Submit" id="submit-btn">
+                    <input type="reset" value="Reset" id="reset-btn">
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    
+
+    <script>
+        function redirect() {
+            window.location.href = "home.html";
+        }
+
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            
+            localStorage.setItem("name", name);
+            localStorage.setItem("email", email);
+        
+            document.getElementById("login-form-container").style.display = "none";
+        
+            alert("Hello! " + name + " your login is successful!"); 
+        });
+
+        document.getElementById("reset-btn").addEventListener("click", function() {
+            localStorage.clear();
+        });
+
+        document.getElementById("cookies-btn").addEventListener("click", function() {
+            document.getElementById("cookies").style.display = "none";
+        });
+    </script>
+
+    <script src="cookies.js"></script>
+</body>
+</html>

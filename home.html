@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="home.css">
+  <title>GNOSIS - OVERVIEW </title>
+</head>
+<body>
+  <div id="songModal" class="modal">
+    <div class="modal-content">
+      <p>Would you like to listen to a song as you delve into this website?</p>
+      <button id="yesBtn">Sure!</button>
+      <button id="noBtn">I'm alright!</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="navbar" id="navbar">
+      <a href="index.html"> <img src="logo.png" class="logo"> </a>
+      <nav id="navmenu">
+        <ul>
+          <ul>
+            <li><a href="home.html">Overview</a></li>
+            <li><a href="region.html">Insights</a></li>
+            <li><a href="odyssey.html">Odyssey</a></li>
+            <li><a href="about.html">About</a></li>
+            </ul>
+        <div class="navclose" id="navclose">
+          <img src="close-line.png" class="ri-close-circle-fill">
+        </div>
+      </nav>
+      <div class="navtoggle" id="navtoggle">
+        <img src="apps-line.png" class="ri-apps-line">
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="content">
+      <section class="section-hero"> 
+        <h1> Quantum Computing: Revolutionizing the Future of Technology </h1>
+        <p id="first"> Quantum computing is an <strong>advanced branch of computer science that leverages the principles of quantum theory. </strong>
+          Quantum theory investigates the behaviour of energy and matter on the atomic and subatomic levels. <br><br>
+          By harnessing subatomic particles such as photons and electrons, quantum computing introduces
+          a transformative approach to processing information.
+          Quantum bits, also known as qubits, are crucial to quantum computing. Unlike classical bits, which can only represent a 0 or a 1, 
+          qubits have the unique capacity to exist in several states at the same time, thanks to a phenomenon called superposition. This indicates that qubits can be either 0 or 1, or both.
+          <br>
+          Moreover, when qubits are entangled, they can interact in ways that allow them to <u>
+          "exploit the interference between their wave-like quantum states to perform calculations
+          that might otherwise take millions of years."</u> This interconnectedness and ability to handle 
+          vast amounts of data simultaneously give quantum computers a significant edge over classical
+          computers, which encode information in a binary stream of electrical impulses (1s and 0s), 
+          limiting their processing capabilities.
+          As quantum computing continues to evolve, it promises to revolutionize various fields by solving 
+          complex problems that are currently beyond the reach of classical computers. This groundbreaking 
+          technology holds the potential to transform industries ranging from cryptography and materials 
+          science to pharmaceuticals and artificial intelligence.
+           </p>
+      </section>
+      <section class="section">
+        <div class="section-two">
+             <p id="second"> Key Takeaways </p>
+             <dl>
+              <dt><strong>Quantum Computing Basics:</strong></dt>
+              <dd>&emsp;&emsp;Quantum computing leverages quantum physics to innovate computational methods.</dd><br>
+              <dt><strong>Qubits vs. Bits:</strong></dt>
+              <dd>&emsp;&emsp;Unlike classical computer bits (0 or 1), qubits can exist in a multidimensional state, representing both 0 and 1 simultaneously.</dd><br>
+              <dt><strong>Exponential Growth:</strong></dt>
+              <dd>&emsp;&emsp;The power of quantum computers increases exponentially with the addition of more qubits, whereas classical computers experience linear growth with added bits.</dd><br>
+            </dl>
+        </div>
+      </section>
+      
+      <section class="section_three">
+        <div id="section-three">
+          <dl>
+            <dt> <strong>Understanding Quantum Computing</strong> </dt>
+            <dd> &emsp;&emsp; Quantum computing emerged in the 1980s when researchers discovered that certain complex problems 
+              could be solved more efficiently using quantum algorithms. Unlike classical computers, which use 
+              bits to store information as 0s or 1s, quantum computers utilize qubits. These qubits hold information
+              in quantum states that incorporate both 0 and 1 in a multidimensional form,
+              vastly enhancing computational potential. <br><br>
+            
+              This immense potential has attracted major companies such as IBM, Microsoft, Google, D-Wave Systems,
+              Alibaba, Nokia, Intel, Airbus, HP, Toshiba, Mitsubishi, SK Telecom, NEC, Raytheon, Lockheed Martin,
+              Rigetti, Biogen, Volkswagen, and Amgen.
+            </dd>
+          </dl>  
+        </div>
+      </section>
+        <br>
+    <section class = "section_four">
+      <div id="section-four">
+        <p>Applications and Gains from Quantum Computing<br> </p>
+          <span>Significant progress in a number of domains is anticipated with quantum computing, including:</span> 
+        
+        <dl>
+          <dt><strong> Security: </strong></dt>
+          <dd>  Improving the safe exchange of data and enhancing aeroplane and missile radar detection.          </dd>
+          <br>
+          <dt><strong>Finance: </strong></dt>
+          <dd>Facilitating the development of sophisticated trading simulators, more successful investment 
+            portfolio designs, and enhanced fraud detection systems for financial organisations.</dd>
+          <br>
+          <dt><strong>Healthcare: </strong></dt>
+          <dd>Promoting the creation of novel medications, genetically tailored treatments, and cutting-edge DNA research. </dd>
+          <br>
+          <dt><strong>Aerospace: </strong></dt>
+          <dd>Supporting the development of improved traffic planning systems and safer, more effective aircraft designs. </dd>
+          <br>
+          <dt><strong>Environment: </strong></dt>
+          <dd>By using cutting-edge chemical sensors to keep the water clean, we can help preserve the environment.
+              Quantum computing has the potential to transform a number of industries, spurring creativity and resolving
+              some of the trickiest problems confronting humanity right now. </dd>
+        </dl>
+        </div>
+    </section>
+    </div>
+    <div class="image-container">
+      <img src="home1.png" alt="image" id="zoom-image">
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <script>
+    const navbar = document.getElementById('navbar');
+    const navToggle = document.getElementById('navtoggle');
+    const navClose = document.getElementById('navclose');
+
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        navbar.classList.add('show-menu');
+      });
+    }
+
+    if (navClose) {
+      navClose.addEventListener('click', () => {
+        navbar.classList.remove('show-menu');
+      });
+    }
+
+    console.clear();
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    window.addEventListener("load", () => {
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".wrapper",
+          end: "+=190%",
+          pin: true,
+          scrub: true,
+        }
+      })
+      .to("#zoom-image", {
+        scale: 5,
+        z: 4000,
+        transformOrigin: "center center",
+        ease: "power1.inOut"
+      })
+      .to(
+        ".section.hero",
+        {
+          scale: 1.1,
+          transformOrigin: "center center",
+          ease: "power1.inOut"
+        },
+        "<"
+      );
+    });
+
+    const songModal = document.getElementById('songModal');
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    let song;
+
+      window.onload = () => {
+        songModal.style.display = 'flex';
+        const isSongPlaying = localStorage.getItem('songPlaying');
+        yesBtn.addEventListener('click', () => {
+        songModal.style.display = 'none';
+        song = new Audio('song.mp3'); 
+        song.play();
+        localStorage.setItem('songPlaying', 'true');
+      });
+
+      noBtn.addEventListener('click', () => {
+        songModal.style.display = 'none';
+        localStorage.setItem('songPlaying', 'false');
+      });      
+      };
+  </script>
+</body>
+</html>
